@@ -37,8 +37,8 @@ class ValidationIpt extends LitElement {
   static get properties() {
     return {
       regex: {type: String},
-      // 받을때 string을 array로 바꿔서 받기
       type: {
+        // 받을때 string을 array로 바꿔서 받기
         converter(value, type) {
           return value.split(" ");
         },
