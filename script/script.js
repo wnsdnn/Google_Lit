@@ -13,7 +13,7 @@ class RegexChk extends LitElement {
 
   regexChk(e) {
     // String를 정규식으로 바꿀려면 맨 앞뒤에 있는 "/" 없애서 new EegExp에 넣어줘야함
-    const regex = new RegExp(this.regex.substring(1, this.regex.length - 1));
+    const regex = new RegExp(this.regex);
     const isValid = regex.test(e.target.value);
 
       if (isValid) {
@@ -33,13 +33,12 @@ class RegexChk extends LitElement {
     `;
   }
 }
-customElements.define('regex-chk', RegexChk);
-
 
 class ValidationIpt extends LitElement {
   static get properties() {
     return {
       regex: {type: String},
+      // 받을때 string을 array로 바꿔서 받기
       type: {
         converter(value, type) {
           return value.split(" ");
@@ -89,7 +88,6 @@ class ValidationIpt extends LitElement {
     `;
   }
 }
+
+customElements.define('regex-chk', RegexChk);
 customElements.define('validation-ipt', ValidationIpt);
-
-
-
