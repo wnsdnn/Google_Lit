@@ -12,19 +12,18 @@ class RegexChk extends LitElement {
   }
 
   regexChk(e) {
-    // String를 정규식으로 바꿀려면 맨 앞뒤에 있는 "/" 없애서 new EegExp에 넣어줘야함
     const regex = new RegExp(this.regex);
     const isValid = regex.test(e.target.value);
 
-      if (isValid) {
-        const validEvent = new CustomEvent('valid');
+    if (isValid) {
+      const validEvent = new CustomEvent('valid');
 
-        this.dispatchEvent(validEvent);
-      } else {
-        const inValidEvent = new CustomEvent('inValid');
+      this.dispatchEvent(validEvent);
+    } else {
+      const inValidEvent = new CustomEvent('inValid');
 
-        this.dispatchEvent(inValidEvent);
-      }
+      this.dispatchEvent(inValidEvent);
+    }
   }
 
   render() {

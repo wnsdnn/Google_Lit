@@ -1,24 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Lit</title>
   <script type="module" src="./script/script.js"></script>
   <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-  <div id="root">
     <!-- 
       regex: input의 value와 비교하고 싶은 정규식 (앞뒤에 "/" 제외)
       type: 각각 실행적용시키고 싶은 옵션(색상변경, disabled, text 삭제)
      -->
-    <h3>한글이 아닌 값을 입력하면 색상 변경</h3>
-    <validation-ipt regex="[^ㄱ-핳]" type="color"></validation-ipt>
-
-    <h3>한글이 아닌 값을 입력하면 Input Disabled</h3>
-    <validation-ipt regex="[^ㄱ-핳]" type="disabled"></validation-ipt>
-
-    <h3>한글이 아닌 값을 입력하면 텍스트 삭제</h3>
-    <validation-ipt regex="[^ㄱ-핳]" type="text"></validation-ipt>
-
-    <h3>한글이 아닌 값을 입력하면 Input Disabled & 색상 변경 (2개)</h3>
-    <validation-ipt regex="[^ㄱ-핳]" type="color disabled"></validation-ipt>
-  </div>
+     <h3>한글이 아닌 값을 입력하면 색상 변경</h3>
+     <validation-ipt regex="[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣]" type="color"></validation-ipt>
+ 
+     <h3>한글이 아닌 값을 입력하면 Input Disabled</h3>
+     <validation-ipt regex="[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣]" type="disabled"></validation-ipt>
+ 
+     <h3>한글이 아닌 값을 입력하면 텍스트 삭제</h3>
+     <validation-ipt regex="[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣]" type="text"></validation-ipt>
+ 
+     <h3>한글이 아닌 값을 입력하면 Input Disabled & 색상 변경 (2개)</h3>
+     <validation-ipt regex="[^ㄱ-ㅎ|ㅏ-ㅣ|가-힣]" type="color disabled"></validation-ipt>
 </body>
+</html>
+
