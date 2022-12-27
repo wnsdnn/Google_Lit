@@ -1,0 +1,21 @@
+<!doctype html>
+<head>
+  <script type="module" src="./script/script.js"></script>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+  <div id="root">
+    <h3>한글이 아닌 값을 입력하면 색상 변경</h3>
+    <validation-ipt regex="/[^ㄱ-핳]/" type="color"></validation-ipt>
+
+    <h3>한글이 아닌 값을 입력하면 Input Disabled</h3>
+    <validation-ipt regex="/[^ㄱ-핳]/" type="disabled"></validation-ipt>
+
+    <h3>한글이 아닌 값을 입력하면 텍스트 삭제</h3>
+    <validation-ipt regex="/[^ㄱ-핳]/" type="text"></validation-ipt>
+
+    <h3>한글이 아닌 값을 입력하면 Input Disabled & 색상 변경 (2개)</h3>
+    <validation-ipt regex="/[^ㄱ-핳]/" type="color disabled"></validation-ipt>
+  </div>
+  <!-- <validation-ipt color=""></validation-ipt> -->
+</body>
